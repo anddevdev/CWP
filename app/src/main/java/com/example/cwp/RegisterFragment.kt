@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import com.example.cwp.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class Register : Fragment(R.layout.fragment_register) {
+class RegisterFragment : Fragment(R.layout.fragment_register) {
 
     private lateinit var binding: FragmentRegisterBinding
 

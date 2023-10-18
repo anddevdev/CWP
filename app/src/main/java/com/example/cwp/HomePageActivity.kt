@@ -12,22 +12,22 @@ class HomePageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_page_activity)
+        setContentView(R.layout.activity_home_page)
 
         bottomNavigationView = findViewById(R.id.bottom_navigation)
 
         // Set the initial fragment (e.g., HomeFragment)
-        val initialFragment = Home()
+        val initialFragment = HomeFragment()
         replaceFragment(initialFragment)
 
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_home -> {
-                    replaceFragment(Home())
+                    replaceFragment(HomeFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_profile -> {
-                    replaceFragment(Profile())
+                    replaceFragment(ProfileFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> false

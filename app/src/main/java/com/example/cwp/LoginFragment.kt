@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.cwp.HomePageActivity
 import com.example.cwp.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class Login : Fragment(R.layout.fragment_login) {
+class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private lateinit var binding: FragmentLoginBinding
 
@@ -27,7 +26,7 @@ class Login : Fragment(R.layout.fragment_login) {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(requireActivity()) { task ->
                     if (task.isSuccessful) {
-                        // Login successful
+                        // LoginFragment successful
                         val user = auth.currentUser
                         // You can handle the logged-in user here
 
@@ -36,10 +35,10 @@ class Login : Fragment(R.layout.fragment_login) {
                         startActivity(intent)
                         requireActivity().finish() // Optionally, finish the login activity
                     } else {
-                        // Login failed
+                        // LoginFragment failed
                         Toast.makeText(
                             requireContext(),
-                            "Login failed: ${task.exception?.message}",
+                            "LoginFragment failed: ${task.exception?.message}",
                             Toast.LENGTH_SHORT
                         ).show()
                     }

@@ -23,10 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login"/>
-        <activity android:name=".Register"/>
+        <activity android:name=".LoginFragment"/>
+        <activity android:name=".RegisterFragment"/>
         <activity android:name=".HomePageActivity"/>
-        <activity android:name=".Home"/>
+        <activity android:name=".HomeFragment"/>
     </application>
 
 </manifest>
